@@ -52,7 +52,7 @@ export const MuestrasDeAfecto: React.FC<MuestrasDeAfectoProps> = ({ className })
           </div>
           <p>
             Apreciamos mucho su amor y apoyo. Si desean obsequiarnos algo, nos encantaría recibir regalos
-            que quepan en nuestra maleta o una contribución para nuestra nueva aventura
+            que quepan en nuestra maleta o muestras de amor en sobres 💵😏🤣!
           </p>
           <p>
             Mientras unimos nuestras vidas, te invitamos a unirte a la partida: trae tu control y celebremos juntos

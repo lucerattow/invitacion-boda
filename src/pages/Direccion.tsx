@@ -17,8 +17,8 @@ export const Direccion: React.FC<DireccionProps> = ({ className }) => {
             <h1>Lugar del evento</h1>
           </div>
           <div className={styles.namesContainer}>
-        
-            <h3><span className={styles.direccion_label}>Centro Attentio</span><br /> Km 17.5 carr vieja a León</h3>
+
+            <h3><span className={styles.direccion_label}>Centro Attentio</span><br /> Km 17.5 carr vieja a León <br /> 100 mts al norte</h3>
           </div>
           <a href="https://maps.app.goo.gl/hnNxbkjLBdb3vBGb8" target="_blank" rel="noopener noreferrer">
             <img src={imgUbicacion} alt="Mapa de ubicación de nuestra boda" title="ubicación" className={styles.namesSvg} />

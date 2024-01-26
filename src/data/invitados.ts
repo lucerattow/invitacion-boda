@@ -199,4 +199,40 @@ export const invitados: Invitado[] = [
     tableNumber: "1",
     validFor: "1 personas"
   },
+  {
+    id: "NazaCasa",
+    name: "Sr. Nazareno Casas",
+    tableNumber: "1",
+    validFor: "1 personas"
+  },
+  {
+    id: "GustMaid",
+    name: "Sr. Gustavo JORGE Maidana",
+    tableNumber: "1",
+    validFor: "1 personas"
+  },
+  {
+    id: "elRiti",
+    name: "Sr. Emmanuel Ritiro",
+    tableNumber: "1",
+    validFor: "2 personas"
+  },
+  {
+    id: "CamiCera",
+    name: "Sra. Camila Ceratto",
+    tableNumber: "1",
+    validFor: "3 personas"
+  },
+  {
+    id: "DariCera",
+    name: "Sr. Dario Ceratto",
+    tableNumber: "1",
+    validFor: "2 personas"
+  },
+  {
+    id: "MaurFran",
+    name: "Sr. Mauro Franetovich",
+    tableNumber: "1",
+    validFor: "2 personas"
+  },
 ];
