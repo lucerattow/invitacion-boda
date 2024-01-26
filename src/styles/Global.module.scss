@@ -1,0 +1,318 @@
+.invitationContainer {
+  display: flex;
+  flex-direction: row;
+  min-height: 100vh;
+  width: 100%;
+  padding-top: 100px;
+}
+
+.leftColumn {
+  flex: 1;
+  background: url('../assets/wedding_bg_desktop.webp') no-repeat center center;
+  background-size: cover;
+}
+
+.rightColumn {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255, 255, 255, 0.9);
+  padding: 50px 20px 0 0;
+}
+
+.textContent {
+  max-width: 600px;
+  margin: auto;
+  text-align: center;
+  max-width: 70%;
+}
+
+.titleContainer, .namesContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.namesContainer {
+  margin-top: 20px;
+}
+
+.paraContainer {
+  position: relative;
+  text-align: center;
+  margin-top: 30px;
+}
+
+.paraContainer p {
+  font-size: 20px;
+}
+
+.data_invitados p {
+  text-align: center;
+  font-size: 1.2rem;
+  color: #d97b44;
+  font-weight: 600;
+}
+
+.data_invitados i {
+  margin-right: 5px;
+}
+
+.hora {
+  font-size: 20px;
+}
+
+.cita{font-size: 14px;}
+
+.separator {
+  display: inline-block;
+  margin: 0 10px;
+  height: 1px;
+  width: 20px;
+  background-color: #000;
+}
+.paraContainer::after {
+  content: '';
+  display: block;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(to right, rgba(0, 0, 0, 0), #DD8857, rgba(0, 0, 0, 0));
+  position: absolute;
+  bottom: -5px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.dateLocation {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 40px;
+  font-size: 1.2em;
+}
+.programmerJoke {
+
+  transition: opacity 1s ease-in-out;
+
+}
+
+.date {
+  display: flex;
+  align-items: center;
+}
+
+.date span:not(:last-child)::after {
+  content: '|';
+  margin: 0 10px;
+  color: #c76404!important;
+}
+
+.location {
+  margin-top: 10px;
+}
+
+.namesSvg {
+  width: 200px;
+  height: auto;
+}
+
+.decorativeSvg {
+  width: 133px;
+  height: auto;
+}
+
+.heartContainer {
+  position: relative;
+  width: 10px;
+  height: 30px;
+  margin: 20px auto;
+  animation: heartBeat 1s infinite;
+  z-index: -2;
+}
+
+.heart {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 30px;
+  height: 30px;
+  background-color: red;
+  transform: translate(-50%, -50%) rotate(0deg);
+}
+
+.heart:before,
+.heart:after {
+  content: "";
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  background-color: red;
+  border-radius: 50%;
+}
+
+.heart:before {
+  top: -15px;
+  left: 0;
+  transform: rotate(-45deg);
+}
+
+.heart:after {
+  top: 0;
+  left: 15px;
+  transform: rotate(-45deg);
+}
+
+
+
+@media (max-width: 768px) {
+  .invitationContainer {
+    flex-direction: column;
+  }
+
+  .leftColumn {
+    order: 2;
+    height: auto;
+    background: url('../assets/wedding_bg_mobile.webp') no-repeat center center;
+    background-size: cover;
+    padding-bottom: 80%;
+  }
+
+  .rightColumn {
+    order: 1;
+    padding: 20px;
+  }
+
+  .textContent {
+    max-width: 100%;
+    padding-top: 10px;
+  }
+
+  .paraContainer::after {
+    width: 100%;
+  }
+
+  .namesSvg {
+    width: 158px;
+  }
+
+  .decorativeSvg {
+    width: 80px;
+  }
+}
+.centeredContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* ANIMACIONES CHIDAS*/
+@keyframes heartBeat {
+  0%   { transform: translate(-50%, -50%) rotate(-45deg) scale(1); }
+  50%  { transform: translate(-50%, -50%) rotate(-45deg) scale(0.9); }
+  100% { transform: translate(-50%, -50%) rotate(-45deg) scale(1); }
+}
+
+@keyframes slideInFromLeft {
+  0% { transform: translateX(-100%); }
+  100% { transform: translateX(0); }
+}
+
+@keyframes slideInFromRight {
+  0% { transform: translateX(100%); }
+  100% { transform: translateX(0); }
+}
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+.namesSvg {
+  animation: float 2s ease-in-out infinite;
+}
+
+.namesContainer {
+  animation: fadeInUp 0.5s ease-out;
+}
+.textContent p {
+  opacity: 0;
+  animation: fadeInUp 0.5s ease-out forwards;
+  animation-delay: 0.3s;
+}
+
+
+@keyframes draw {
+  from {
+    stroke-dashoffset: 1000;
+  }
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+.decorativeSvg {
+  stroke-dasharray: 1000;
+  stroke-dashoffset: 1000;
+  animation: draw 2s forwards;
+}
+
+@keyframes bounce {
+  0%, 100% { transform: translateY(0); }
+  25% { transform: translateY(-20px); }
+  50% { transform: translateY(10px); }
+  75% { transform: translateY(-10px); }
+}
+
+.h1_custom {
+  font-size: 60px;
+  font-weight: 600;
+  animation: bounce 1s ease-in-out infinite;
+  text-align: center;
+}
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.textoFadeIn {
+  animation: fadeIn 1s ease-in;
+  text-align: center;
+  max-width: 80%;
+   font-size: 20px;
+}
+
+.align_text_wedding{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+}
+
+.custom_text{font-size: 42px; color: #d97b44;}
+.title_custom{font-size: 22px;}
+.direccion_label{ color: #d97b44;line-height: 3;}
+.btn_wedding {
+  padding: 10px 20px;
+  background-color: #D58B43;
+  border: none;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+  outline: none;
+  transition: transform 0.2s;
+  text-decoration: none;
+  font-size: 20px;
+}
